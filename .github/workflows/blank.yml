@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install bats-core
+      run: |
+        git clone https://github.com/bats-core/bats-core.git
+        cd bats-core
+        ./install.sh $HOME
+        which bats
