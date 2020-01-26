@@ -20,4 +20,5 @@ jobs:
         ./install.sh $HOME || true
     - name: Install bats-core
       run: |
+        echo $PATH
         which bats
