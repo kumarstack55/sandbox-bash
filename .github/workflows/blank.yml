@@ -9,10 +9,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: bats-coreをインストールする
+    - name: batsをインストールする
       run: |
-        git clone https://github.com/bats-core/bats-core.git
-        whoami
+        (cd; git clone https://github.com/bats-core/bats-core.git)
     - name: テストを実行する
       run: |
         $HOME/bats-core/bin/bats test
