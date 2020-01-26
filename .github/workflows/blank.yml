@@ -17,7 +17,8 @@ jobs:
         cd bats-core
     - name: Install bats-core
       run: |
-        ./install.sh $HOME || true
+        whoami
+        ./install.sh /usr/local || true
     - name: Install bats-core
       run: |
         echo $PATH
