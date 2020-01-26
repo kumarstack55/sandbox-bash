@@ -12,6 +12,12 @@ jobs:
     - name: Install bats-core
       run: |
         git clone https://github.com/bats-core/bats-core.git
+    - name: Install bats-core
+      run: |
         cd bats-core
+    - name: Install bats-core
+      run: |
         ./install.sh $HOME || true
+    - name: Install bats-core
+      run: |
         which bats
